@@ -16,9 +16,10 @@ document.querySelector('#app').innerHTML = `
       </div>
       
     </div>
-      <div id="buttons" class="z-50 mt-32 md:mb-20 mb-56 flex flex-col justify-center items-center"></div>
+      <div class="flex flex-col justify-center items-center"><span id="fecha" class="flex mt-12 flex-col justify-center text-center text-white text-3xl opacity-0 duration-700 delay-1000">28 · 12 · 24</span></div>
+      <div id="buttons" class="z-50 mt-12 md:mb-20 mb-56 flex flex-col justify-center items-center"></div>
       <div id="footer" class="flex flex-col justify-center w-screen bg-black text-white fixed bottom-0 text-center text-sm">
-        <div class="flex justify-center text-xs"><span class="px-4">¿Quieres contratarnos?</span><a href=""></a><a class="flex justify-center" href="tel://663779386"><span class="material-icons-round text-[4px] w-12">phone_enabled</span>Llámanos</a><a class="flex justify-center" href="tel://663779386"><span class="material-icons-round text-[4px] w-12">mail</span>Escribenos</a></div>
+        <div class="flex justify-center text-xs"><span class="px-4">¿Quieres contratarnos?</span><a href=""></a><a class="flex justify-center" href="tel://663779386"><span class="material-icons-round text-[4px] w-12">phone_enabled</span>Llámanos</a><a class="flex justify-center" href="mailto://hola@efectiviwonders.es"><span class="material-icons-round text-[4px] w-12">mail</span>Escribenos</a></div>
         <div>© 2024 Efectiviwonders. Todos los derechos reservados.</div>
       </div>
   </div>
@@ -34,14 +35,15 @@ function fadeIn(){
   const logo = document.getElementById('logo');
   const mochachos = document.getElementById('mochachos');
   const content = document.getElementById('content');
-
+  const fecha = document.getElementById('fecha');
   logo.classList.remove('opacity-0');
   logo.classList.add('opacity-100');
   mochachos.classList.remove('opacity-0');
   mochachos.classList.add('opacity-45');
   content.classList.remove('opacity-0');
   content.classList.add('opacity-100');
-  
+  fecha.classList.remove('opacity-0');
+  fecha.classList.add('opacity-100');
 }
 
 function countDown(){
@@ -59,9 +61,9 @@ function countDown(){
     let days = Math.floor(distance / (1000 * 60 * 60 * 24));
     let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    let seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    let seconds = Math.floor((distance % (1000 * 60)) / 1000) ;
 
-    time = `${days}:${hours}:${minutes}:${seconds}`;
+    time = `${days}:${hours<10?'0'+hours:hours}:${minutes<10?'0'+minutes:minutes}:${seconds<10?'0'+seconds:seconds}`;
     countDown.innerHTML = time;
     content.appendChild(countDown);
     
@@ -75,6 +77,6 @@ function addButton(){
   const button = document.createElement('a');
   button.classList.add('bg-blue-400', 'text-black', 'text-lg','text-center', 'p-2', 'w-64', 'z-50','rounded-lg', 'hover:bg-black', 'hover:text-white');
   button.innerHTML = frasesCompra();
-  button.href="https://www.google.com"
+  button.href="https://www.salaclandestino.com/web/?menu=1162&pagina=entradas&item=50790&siteID=salaclandestino"
   content.appendChild(button);
 }
