@@ -16,8 +16,8 @@ document.querySelector("#app").innerHTML = `
       </div>
       
     </div>
-      <div class="flex flex-col justify-center items-center"><span id="fecha" class="flex mt-12 flex-col justify-center text-center text-white text-3xl opacity-0 duration-700 delay-1000">26 · 12 · 25</span><span id="fecha2" class="flex mb-12 flex-col justify-center text-center text-white text-3xl opacity-0 duration-700 delay-1000">27 · 12 · 25</span></div>
-      <div id="buttons" class="z-50 mt-12 md:mb-20 mb-56 flex flex-col justify-center items-center"></div>
+      <div class="flex flex-col justify-center items-center"><span id="fecha" class="flex mt-6 flex-col justify-center text-center text-white text-3xl opacity-0 duration-700 delay-1000">26 · 12 · 25</span><span id="fecha2" class="flex mb-6 flex-col justify-center text-center text-white text-3xl opacity-0 duration-700 delay-1000">27 · 12 · 25</span></div>
+      <div id="buttons" class="z-50 mt-6 md:mb-20 mb-56 flex flex-col justify-center items-center"></div>
       <div id="footer" class="flex flex-col justify-center w-screen bg-black text-white fixed bottom-0 text-center text-sm">
         <div class="flex justify-center text-xs"><span class="px-4">¿Quieres contratarnos?</span><a href=""></a><a class="flex justify-center" href="tel://663779386"><span class="material-icons-round text-[4px] w-12">phone_enabled</span>Llámanos</a><a class="flex justify-center" href="mailto:efectiviwondersbanda@gmail.com"><span class="material-icons-round text-[4px] w-12">mail</span>Escribenos</a></div>
         <div>© 2025 Efectiviwonders. Todos los derechos reservados.</div>
@@ -98,6 +98,6 @@ function addButton() {
   );
   button.innerHTML = frasesCompra();
   button.href =
-    "https://www.salaclandestino.com/web/?menu=1162&pagina=entradas&item=50790&siteID=salaclandestino";
+    "https://www.salaclandestino.com/web/?menu=1162&pagina=entradas&item=56877&siteID=salaclandestino";
   content.appendChild(button);
 }
